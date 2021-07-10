@@ -1,0 +1,164 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $header-bg;
+
+  :global(.container) > :global(.row) {
+    height: 145px;
+  }
+
+  .phoneNumber {
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 42px;
+      color: $companyClaim-phone-text;
+      font-weight: 500;
+
+      .icon {
+        font-size: 32px;
+        color: $companyClaim-phone-icon;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+
+  .cart {
+    .cartBox {
+      display: inline-block;
+      position: relative;
+      color: $companyClaim-cartBox;
+
+      .cartIcon {
+
+        @extend %hover-effect;
+        background-color: $companyClaim-cartIcon-bg;
+        width: 55px;
+        height: 50px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        font-size: 20px;
+
+        .icon {
+          margin-right: 5px;
+        }
+      }
+
+      .cartCounter {
+        width: 30px;
+        height: 27px;
+        border-radius: 14px;
+        padding-left: 5px;
+        background-color: $header-bg;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-size: 14px;
+        color: $companyClaim-cartCounter;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+      &:hover {
+        .cartIcon {
+          background-color: lighten($companyClaim-cart-bg-hover, 10%);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    position: relative;
+
+    .cart {
+      position: relative;
+      height: 45px;
+      padding: 0 30px;
+      top: -30%;
+
+      .cartBox {
+        .cartIcon {
+          width: 40px;
+          height: 35px;
+          font-size: 15px;
+
+        }
+        .cartCounter {
+          font-size: 12px;
+          width: 23px;
+          height: 22px;
+        }
+      }
+    }
+
+    .phoneNumber {
+      position: absolute;
+      right: 0;
+      top: 100px;
+
+      p {
+        font-size: 11px;
+
+        .icon {
+          font-size: 25px;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .image{
+      top: 20%;
+      img {
+        height: 60px;
+      }
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    position: relative;
+
+    .cart {
+      height: 45px;
+      padding: 0 30px;
+      margin-left: auto;
+      transform: translateY(-50%);
+      top: -15%;
+
+      .cartBox {
+        .cartIcon {
+          width: 45px;
+          height: 40px;
+          font-size: 17px;
+
+        }
+        .cartCounter {
+          font-size: 13px;
+          width: 25px;
+          height: 24px;
+        }
+      }
+    }
+
+    .phoneNumber {
+      position: absolute;
+      right: auto;
+      top: 45px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+    .image{
+      top: 20%;
+      img {
+        height: 60px;
+      }
+    }
+  }
+}

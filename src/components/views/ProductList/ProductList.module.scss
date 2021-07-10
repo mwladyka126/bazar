@@ -1,0 +1,106 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 0 0 $base-padding 0;
+
+  .content {
+    height: auto;
+
+    .noProduct {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0;
+      width: 100%;
+      height: 100%;
+
+      p {
+        margin: 15rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: gray;
+      }
+    }
+  }
+
+  .header {
+    border-bottom: 2px solid gray;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+
+  .filterRange {
+    display: flex;
+    flex-direction: column;
+
+    &__name {
+      margin-top: 20px;
+      border-bottom: 1px solid gray;
+      padding: 5px 0;
+      text-transform: uppercase;
+    }
+  }
+
+// TAGS START
+  .headerTags {
+
+    .title {
+      color: $dark-color-2;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .filtersList {
+    margin: 18px 0;
+    font-size: 13px;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      line-height: 34px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        opacity: 0.6;
+        margin: 5px;
+
+        .tag {
+          padding: 6px 12px;
+          border: 2px solid $silver-color;
+          display: inline;
+          cursor: pointer;
+
+          span {
+            padding-left: 7px;
+            cursor: pointer;
+            margin: 0;
+            width: auto;
+            height: auto;
+          }
+        }
+
+        &:hover {
+          color: $creme-main;
+
+          .tag {
+            border: 2px solid $creme-main;
+          }
+        }
+      }
+    }
+  }
+// TAGS END
+}
+.newsletter {
+  margin-bottom: -25px;
+}
+
+@media(max-width: 780px) {
+  .order {
+    flex-direction: column-reverse !important;
+  }
+}

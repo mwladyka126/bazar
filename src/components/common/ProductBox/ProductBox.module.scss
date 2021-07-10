@@ -1,0 +1,133 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $productBox-background;
+  border: 1px solid $productBox-border;
+  margin-bottom: 2rem;
+
+  .photo {
+    position: relative;
+    padding: 0;
+    background: {
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+    object-fit: cover;
+
+    .sale {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $productBox-sale-background;
+      border-radius: 50%;
+      color: $productBox-sale-font-color;
+      padding: 30px 15px 5px 15px;
+    }
+
+    .buttons {
+      @extend %hover-effect;
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      .button {
+        flex: 50%;
+        padding: 5px;
+        text-align: center;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $productBox-content-font-color;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $productBox-border-bottom;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $productBox-border-bottom-before;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .checked {
+      background-color: $creme-main;
+
+      .icon {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .price {
+    @extend %hover-effect;
+    display: flex;
+
+    @media (max-width: 992px) {
+      display: block;
+    }
+
+    .firstPrice {
+      color: $text-color;
+      background-color: #ffffff;
+      border: 1px solid $form-border-color;
+      text-decoration: line-through;
+      font-weight: 400;
+      text-align: center;
+
+      @media (max-width: 992px) {
+        font-size: 11px;
+        line-height: 1.4;
+      }
+    }
+
+    .promoPrice {
+      font-weight: 700;
+      text-align: center;
+
+      @media (max-width: 992px) {
+        font-size: 11px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .price {
+    background-color: black;
+  }
+}
+
+.root:hover .buttons {
+  opacity: 1;
+}
+

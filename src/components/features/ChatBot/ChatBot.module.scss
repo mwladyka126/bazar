@@ -1,0 +1,88 @@
+@import "../../../styles/settings.scss";
+
+.chatBot {
+  position: fixed;
+  bottom: 20px;
+  margin: 10px;
+  z-index: 999;
+  width: 300px;
+
+  .chatBox {
+    background-color: $chatBot-bg;
+    margin-bottom: 20px;
+    display: block;
+    padding: 10px 5px;
+
+    .header {
+      background-color: $chatBot-header-bg;
+      color: $chatBot-font-light;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .chat {
+      min-height: 300px;
+      background-color: $chatBot-chat-bg;
+      margin: 0 auto 20px auto;
+      padding: 5px;
+
+      .chatMessage {
+        border-bottom: 1px solid $chatBot-chatMessage-border;
+
+        img {
+          width: 50px;
+          border-radius: 50%;
+          padding: 5px;
+        }
+
+        span {
+          width: auto;
+        }
+      }
+    }
+
+    .message {
+     display: flex;
+
+      input {
+        flex: 9;
+        padding: 5px;
+        height: 40px;
+      }
+
+      button {
+        @extend %hover-effect;
+        flex: 1;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $chatBot-button-border;
+        margin-left: 5px;
+
+        &:hover {
+          background-color: $chatBot-button-hover-dark;
+          color: $chatBot-font-light;
+        }
+      }
+    }
+  }
+
+  .button {
+    @extend %hover-effect;
+    font-family: "Poppins", sans-serif;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    color: $chatBot-font-dark;
+    border: 2px solid $chatBot-button-border;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $chatBot-button-hover-light;
+      color: $chatBot-font-light;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,58 @@
+@import "../../../styles/settings.scss";
+
+.filterHeading {
+  width: 100%;
+  text-decoration: solid;
+  padding-top: 10px;
+  padding-bottom: 24px;
+  margin: 0;
+
+  .filterColor {
+    display: flex;
+    cursor: pointer;
+
+    p {
+      margin:0;
+      padding: 6px 6px 6px 0;
+      font-size: 15px;
+    }
+
+    &:hover {
+      color: orange;
+      padding-left: 15px;
+    }
+  }
+}
+
+span {
+  display: inline-block;
+  background-color: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.pink {
+  background-color: magenta;
+}
+
+.green {
+  background-color: green;
+}

@@ -1,0 +1,81 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: $base-padding 0;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+
+    &:active,
+    &:hover {
+      color: $creme-main;
+      padding-left: 5px;
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input[type="checkbox"] {
+        outline: none;
+        content: none;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:before {
+        content: "\2713";
+        font-size: 15px;
+        color: transparent !important;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        border: 1px solid black;
+        border-radius: 3px;
+      }
+
+      input[type="checkbox"]:checked:before {
+        color: white !important;
+        background: $creme-main;
+        border: 1px solid $creme-main;
+      }
+
+      label {
+        display: contents;
+      }
+    }
+
+    .number {
+      padding: 5px;
+      margin-right: 5px;
+      background: $dark-color-4;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: $white-color;
+    }
+  }
+}
+
+li:active .number,
+li:hover .number {
+  background: $creme-main !important;
+}

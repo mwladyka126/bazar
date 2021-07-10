@@ -1,0 +1,33 @@
+@import "../../../styles/settings.scss";
+.facebook {
+  color: $btn-facebook;
+}
+.buttonFacebook:hover {
+  .facebook {
+    color: $white-color;
+  }
+}
+.google {
+  color: $btn-google;
+}
+.buttonGoogle:hover {
+  .google {
+    color: $white-color;
+  }
+}
+.twitter {
+  color: $btn-twitter;
+}
+.buttonTwitter:hover {
+  .twitter {
+    color: $white-color;
+  }
+}
+.linkedIn {
+  color: $btn-linkedIn;
+}
+.buttonLinkedIn:hover {
+  .linkedIn {
+    color: $white-color;
+  }
+}

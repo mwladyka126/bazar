@@ -1,0 +1,63 @@
+@import "../../../styles/settings.scss";
+
+.root{
+  background-color: $product-list-banner-bg;
+  margin-bottom: 10px;
+
+  .banner {
+    padding: 40px;
+    color: $banner-font;
+    text-transform: uppercase;
+    text-align: center;
+
+    .headerTop {
+      font-size: 44px;
+
+      @media(max-width: 350px) {
+        font-size: 24px;
+      }
+    }
+
+    .headerBottom {
+      font-size: 24px;
+      letter-spacing: 7px;
+
+      @media(max-width: 350px) {
+        font-size: 16px;
+      }
+
+      span {
+        color: $banner-span-font;
+        font-weight: 700;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+
+  .bannerNav {
+    display: flex;
+    background-color: $banner-nav-bg;
+    padding: 12px 20px;
+    color: $banner-nav-font;
+
+    a {
+      @extend %hover-effect;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $banner-nav-font-hover;
+      }
+    }
+
+    .icon {
+      margin: auto 15px;
+    }
+
+    .bannerCategory {
+      color: $banner-nav-category-font;
+      font-weight: 700;
+    }
+  }
+}

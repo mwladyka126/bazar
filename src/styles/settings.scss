@@ -1,0 +1,190 @@
+// VARIABLES FOR COLORS
+
+$base-padding: 24px;
+
+$black-color: #010202;
+
+$creme-main: #d58e32;
+$creme-transparent: rgba(213, 142, 50, 0.6);
+
+$dark-color-1: #363636;
+$dark-color-2: #2a2a2a;
+$dark-color-3: #292929;
+$dark-color-4: #2a2a2a;
+
+$grey-color: #434343;
+
+$light-color-1: #d8d8d8;
+$light-color-2: #b6b6b6;
+$light-color-3: #f4f5f7;
+$light-color-4: #e2e2e2;
+$light-color-5: #e1e1e1;
+$light-color-6: #e0e3ed;
+$light-color-7: #f1efee;
+
+$silver-color: #a9a9a9;
+
+$transparent: transparent;
+
+$white-color: #ffffff;
+$facebook-blue: #4267b2;
+$linkedIn-blue: #0072b1;
+$twitter-blue: #1da1f2;
+$google-red: #db4437;
+
+$red-color: #d11504;
+
+$slider-overlay: rgba(54, 54, 54, 0.5);
+
+// *****COLORS IN COMPONENTS*****
+
+//***COMPONENTS***
+
+//Button
+$btn-main-font-color: $white-color;
+$btn-main-background-color: $dark-color-2;
+$btn-main-font-color-hover: $white-color;
+$btn-main-background-color-hover: $creme-main;
+$btn-outline-border-color: $dark-color-2;
+$btn-outline-font-color: $dark-color-2;
+$btn-outline-background-color-hover: $dark-color-2;
+$btn-outline-font-color-hover: $white-color;
+$btn-facebook: $facebook-blue;
+$btn-linkedIn: $linkedIn-blue;
+$btn-twitter: $twitter-blue;
+$btn-google: $google-red;
+
+//FeatureBox
+$featureBox-border: $light-color-2;
+$featureBox-icon: $dark-color-2;
+$featureBox-background-before: $white-color;
+$featureBox-text-active: $white-color;
+$featureBox-background-active: $creme-main;
+$featureBox-border-active: $creme-main;
+$featureBox-content-active: $creme-main;
+$featureBox-content-font: $dark-color-4;
+
+//HotDeals
+$background-light: $white-color;
+$slider-background: $slider-overlay;
+
+//Newsletter
+$newsletter-background: $light-color-7;
+$input-background: $white-color;
+
+//ProductBox
+$productBox-background: $white-color;
+$productBox-border: $light-color-5;
+$productBox-photo-background: $light-color-3;
+$productBox-sale-background: $dark-color-3;
+$productBox-sale-font-color: $white-color;
+$productBox-content-font-color: $creme-main;
+$productBox-border-bottom: $dark-color-2;
+$productBox-border-bottom-before: $creme-main;
+$productBox-star-links: $dark-color-4;
+
+//ProductMore
+$text-color-light: $white-color;
+$background-light: $white-color;
+
+//***FEATURES***
+
+//NewFurniture
+$newFurniture-panel-bottom: $light-color-4;
+$newFurniture-panel-text: $creme-main;
+$newFurniture-panel-bottom-before: $creme-main;
+$newFurniture-menu-link-hover-before: $creme-main;
+$newFurniture-dots-background: $white-color;
+$newFurniture-dots-link-background: $light-color-5;
+$newFurniture-dots-link-background-hover: $creme-main;
+$newFurniture-menu-links: $dark-color-4;
+
+//ProductSearch
+$form-border-color: $dark-color-3;
+$form-icon-color: $creme-main;
+$form-select-background: $transparent;
+$text-color: $dark-color-2;
+
+//Brands
+$border-color: #cccccc;
+
+//Gallery
+$gallery-text-color: $creme-main;
+$gallery-light-color: $light-color-3;
+$gallery-green-color: #389f4b;
+
+//ProductListBanner
+$product-list-banner-bg: $dark-color-1;
+$banner-font: $light-color-7;
+$banner-span-font: $creme-main;
+$banner-nav-bg: $light-color-4;
+$banner-nav-font: $dark-color-1;
+$banner-nav-font-hover: $creme-main;
+$banner-nav-category-font: $creme-main;
+
+//ChatBot
+$chatBot-bg: $creme-main;
+$chatBot-header-bg: $grey-color;
+$chatBot-chat-bg: $white-color;
+$chatBot-chatMessage-border: $grey-color;
+$chatBot-button-border: $black-color;
+$chatBot-font-light: $light-color-3;
+$chatBot-font-dark: $dark-color-2;
+$chatBot-button-hover-light: $creme-main;
+$chatBot-button-hover-dark: $grey-color;
+
+//***LAYOUT***
+
+//CompanyClaim
+$header-bg: $dark-color-1;
+$companyClaim-phone-icon: $creme-main;
+$companyClaim-cartBox: $white-color;
+$companyClaim-cartIcon-bg: $creme-main;
+$companyClaim-cart-bg-hover: $creme-main;
+$companyClaim-phone-text: $light-color-1;
+$companyClaim-cartCounter: $light-color-6;
+
+//Footer
+$footer-bg: $dark-color-1;
+$footer-claim-bg: $dark-color-2;
+$footerMenu-font: $white-color;
+$footerMenu-link-hover: $white-color;
+$footer-social-link-hover: $creme-main;
+$footer-text: $silver-color;
+
+//MenuBar
+$menuBar-bg: $white-color;
+$menuBar-links-font: $dark-color-1;
+$menuBar-links-border-top: $white-color;
+$menuBar-links-active-bg: $creme-main;
+$menuBar-links-active-font: $white-color;
+$menuBar-links-acive-border: $creme-main;
+$menuBar-shadow: $black-color;
+
+//***VIEWS***
+
+//Login
+$login-bg: $dark-color-1;
+$login-font: $light-color-1;
+$login-border: $creme-main;
+$login-header-bg: $grey-color;
+$login-links-bg: $white-color;
+$login-links-font: $dark-color-1;
+$login-links-hover-bg: $creme-main;
+$login-links-hover-font: $white-color;
+$login-error-bg: $creme-main;
+$login-error-font: $dark-color-1;
+
+//TopBar
+$header-topbar-bg: $grey-color;
+$topBar-links: $white-color;
+$topBar-links-hover: $creme-main;
+
+//Register
+$register-error: $red-color;
+
+$transition: all 0.25s;
+
+%hover-effect {
+  transition: $transition;
+}

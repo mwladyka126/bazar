@@ -1,0 +1,125 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  border: 1px solid $form-border-color;
+  display: inline-flex;
+  height: 45px;
+  color: $text-color;
+
+  .category {
+    border-right: 1px solid $form-border-color;
+    display: none;
+    align-items: center;
+    position: relative;
+    width: 220px;
+    cursor: default;
+
+    .icon:first-child {
+      color: $form-icon-color;
+      position: absolute;
+      left: 10px;
+      z-index: 0;
+    }
+
+    .icon:last-child {
+      position: absolute;
+      right: 10px;
+      z-index: 0;
+    }
+
+    .list {
+      margin: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      padding-top: 10px;
+      list-style-type: none;
+      background-color: transparent;
+      text-align: left;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .listCategory {
+      @extend %hover-effect;
+      position: relative;
+      display: none;
+      left: -12%;
+      top: 20%;
+      padding: 10px;
+      border: 1px solid $form-border-color;
+      background-color: $background-light;
+    }
+
+    .list:hover {
+      .listCategory {
+        display: block;
+      }
+    }
+
+    .listCategoryItems {
+      @extend %hover-effect;
+      display: none;
+      position: absolute;
+      left: 78%;
+
+      li {
+        @extend %hover-effect;
+        display: block;
+        padding: 5px 10px;
+        width: 150px;
+        border: 1px solid $form-border-color;
+        background-color: $background-light;
+        color: $text-color;
+
+        &:hover {
+          background-color: $creme-main;
+          color: $text-color-light;
+        }
+      }
+    }
+
+    .listCategory:hover {
+      background-color: $creme-main;
+      color: $text-color-light;
+
+      .listCategoryItems {
+        color: inherit;
+        display: inline-block;
+      }
+    }
+  }
+
+  .searchField {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+      border: 0;
+      padding-left: 10px;
+      font-size: 14px;
+      outline: none;
+
+      &::placeholder {
+        color: $text-color;
+      }
+    }
+
+    a {
+      padding: 5px;
+      color: $black-color;
+    }
+  }
+}
+
+@media (min-width: 577px) {
+  .root {
+    .category {
+      display: flex;
+    }
+  }
+}

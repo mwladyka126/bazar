@@ -1,0 +1,60 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 30px auto;
+  text-align: center;
+  max-width: 576px;
+  background-color: $login-bg;
+  color: $login-font;
+  border: 5px solid $login-border;
+
+  .header {
+    padding: 10px;
+    background-color: $login-header-bg;
+    border-bottom: 2px solid $login-border;
+  }
+
+  a {
+    @extend %hover-effect;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 100px;
+    margin: 5px;
+    background-color: $login-links-bg;
+    color: $login-links-font;
+
+    &:hover {
+      background-color: $login-links-hover-bg;
+      color: $login-links-hover-font;
+    }
+  }
+
+  form {
+    padding: 15px;
+    .icon {
+      margin-right: 5px;
+    }
+  }
+
+  input {
+    padding: 5px;
+    margin: 10px auto;
+  }
+  .error {
+    color: $login-error-font;
+    background-color: $login-error-bg;
+    max-width: max-content;
+    margin: 10px auto;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .features {
+    padding: 15px;
+    border-top: 2px solid $login-border;
+
+    .featureBox {
+      margin: 15px auto;
+    }
+  }
+}

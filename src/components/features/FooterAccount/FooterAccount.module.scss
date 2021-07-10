@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  h3 {
+    margin: 20px 0;
+  }
+
+  .box {
+    margin: 20px 0 60px 0;
+
+    .text {
+      margin: 10px 0;
+    }
+
+    .field {
+      height: 100px;
+      width: 300px;
+      background-color: $light-color-2;
+      margin: 20px auto;
+    }
+  }
+}

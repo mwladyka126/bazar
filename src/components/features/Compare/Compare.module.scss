@@ -1,0 +1,79 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  position: fixed;
+  height: 125px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+  padding: 0 100px;
+  left: 50%;
+  z-index: 99;
+  transform: translateX(-50%);
+  background: $creme-transparent;
+  
+  .box {
+    flex: 4;
+    width: 25%;
+    max-width: 150px;
+    height: 90%;
+    box-sizing: border-box;
+    position: relative; 
+    border: 7px solid $dark-color-2;
+  }
+
+    &:before {
+      position: absolute;
+      display: none;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $dark-color-1;
+      opacity: 0.5;
+    }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close {
+    display: none;
+    font-size: 46px;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+  }
+
+  .button {
+    position: absolute;
+    color: $black-color;
+    top: 50%;
+    right: 5px;
+    border: 1px solid $btn-outline-border-color;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 4px;
+    
+    &:hover {
+      background-color: $btn-main-background-color;
+      color: $btn-main-font-color-hover;
+    }
+  }
+
+  .box:hover  {
+    cursor: pointer;
+  }
+
+  .box:hover:before {
+    display: block;
+  }
+
+  .box:hover .close {
+    display: block;
+  }
+}

@@ -1,0 +1,274 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  .heading{
+    position: relative;
+    border-bottom: 4px solid $gallery-light-color;
+
+    h3 {
+      color: $gallery-text-color;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 38px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 45px;
+      border-bottom: 4px solid $gallery-text-color;
+    }
+  }
+
+  .panelBar {
+    ul{
+      display: flex;
+      margin: 1rem 0 0 0;
+      padding: 0;
+      list-style: none;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        flex-grow: 1;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: 600;
+        border: 1px solid $gallery-light-color;
+        text-align: center;
+        cursor: pointer;
+
+        a {
+          padding: 0.5rem 0.7rem;
+          position: relative;
+          text-decoration: none;
+          display: block;
+
+          &.active,
+          &:hover {
+            color: $gallery-text-color;
+            background-color: $gallery-light-color;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -4px;
+              left: 0;
+              width: 100%;
+              border-top: 4px solid $gallery-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .imageBig {
+    width: 100%;
+    border: 1px solid $gallery-light-color;
+    border-top: none;
+    background-color: $gallery-light-color;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .toolsWrapper {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 20%;
+      left: 10px;
+
+      .toolsbox {
+        display: flex;
+        align-items: center;
+
+        .toolsItem {
+          margin: 8px;
+        }
+
+        span {
+          display: none;
+          font-size: 0.7rem;
+          color: $white-color;
+          background-color: $black-color;
+          padding: 2px 6px 2px 8px;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: '';
+            background-color: $black-color;
+            border: 1px solid $black-color;
+            height: 8px;
+            width: 8px;
+            transform: rotate(45deg);
+            left: -3px;
+            top: 6px
+          }
+        }
+
+        &:hover span {
+          display: block;
+        }
+      }
+    }
+
+    .nameWrapper {
+      position: absolute;
+      right: 10%;
+      bottom: 10%;
+
+      .namePrice {
+      position: absolute;
+      bottom: 70%;
+      right: 80px;
+      transform: translateX(50%);
+      background-color: rgba(128, 128, 128, 0.6);
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+        .priceNew {
+          color: $white-color;
+          font-weight: 600;
+        }
+
+        .priceOld {
+          color: $white-color;
+          font-size: 0.8rem;
+          text-decoration: line-through;
+        }
+      }
+
+      .nameRange {
+        position: relative;
+        top: 10px;
+        left: 10%;
+        text-align: center;
+        background-color: $white-color;
+        padding: 15px 25px;
+        overflow: hidden;
+        box-shadow: -1px 2px 4px rgb(128, 128, 128);
+        max-width: 210px;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          background-color: $black-color;
+          z-index: 1;
+        }
+
+        &::before {
+          top: 0;
+          left: -15px;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        &::after {
+          bottom: 0;
+          right: -15px;
+          transform: translateY(50%) rotate(45deg);
+        }
+
+        h6 {
+          font-weight: 700;
+        }
+
+        .nameStars {
+
+          a {
+            text-decoration: none;
+            color: $black-color;
+          }
+        }
+      }
+    }
+  }
+
+  .slider {
+    border: 1px solid $gallery-light-color;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100px;
+
+    &>div {
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .arrow {
+      background-color: $black-color;
+      text-align: center;
+      padding: 20px 10px;
+      line-height: 2.5rem;
+
+      .chevron {
+        color: $white-color;
+      }
+    }
+
+    .thumbnail {
+      flex: 1;
+      min-height: 75px;
+
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        opacity: 0.5;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s;
+}
+
+.fadeOut {
+  animation: fadeOut 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

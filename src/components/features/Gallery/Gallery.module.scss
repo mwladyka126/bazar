@@ -1,0 +1,64 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 3rem 0;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 350px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 100%;
+    background-color: $gallery-light-color;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: absolute;
+      top: 30px;
+      left: 20px;
+
+      .contentInfo {
+        p {
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .bigText {
+          font-size: 3rem;
+          color: $gallery-green-color;
+        }
+      }
+
+      .product {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $gallery-text-color;
+      }
+
+      .contentButton {
+        padding-top: 20px;
+
+        .button {
+          background-color: $gallery-green-color;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+/*Media queries*/
+@media (max-width: 767px) {
+  .imageWrapper {
+    display: none;
+  }
+}
