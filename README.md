@@ -1,30 +1,30 @@
+# BAZAR
 
+## E-commerce shop with furniture
 
+### Short description:
 
-# WDP Projekt Zespołowy
+- `group project` of 7 developers under supervison of the project manager,
+- Work organised in `kanban` system, using `Jira`, including dailies, weeklies and mutual code review,
+- created with `React`,
+- using `Redux` for managing the app state and `React-Router` for routing,
 
-## Inicjacja projektu
+### To see the project visit:
 
-Po sklonowaniu projektu, zainstaluj wymagane paczki komendą `yarn install` (lub `npm install`).
+https://furniture-bazar.herokuapp.com/
 
-Teraz możesz zacząć pracę, korzystając z przygotowanych taska `yarn start` (lub `npm start`).
+---
 
-Wszystkie potrzebne do pracy pliki źródłowe znajdują się w folderach `src` oraz `public`.
+### To run the project:
 
-## NPM Scripts
+- Install all dependencies with `yarn install` (or `npm install`),
+- run the project with `yarn start` (or `npm start`),
 
-Dostępne są 3 główne skrypty przyspieszające pracę:
+### NPM Scripts:
 
-- `build`: na bazie plików z folderów `src` i `public` buduje project w folderze `build`
-- `start`: obserwuje zmiany w folderze `src` i uruchamia podgląd roboczy
-- `test`: uruchomienie testów jednostkowych
-- `refactor`: skrypt dokonuje automatycznego formatowania plików w folderze `src/`
-  zgodnie z przyjętą konwencją formatowania kodu, a także sprawdza błędy za pomocą ESLinta
+To facilitate the work on the project, there are main scripts available:
 
-## Git Hooks
-
-Projekt korzysta z Git Hooks - możliwości uruchamiania skryptów w reakcji na wybrane zdarzenia programu Git.
-
-Za każdym razem gdy wykonasz komendę `git commit` zostaną uruchomione testy jednostkowe, formatowanie oraz lintowanie
-dla plików, które zostały wybrane za pomocą `git add` i mają być zapisane w commicie.
-
+- `build`: to build the project with the files placed in `src` and `public` folders,
+- `start`: to watch changes in the `src` folder,
+- `test`: to run tests,
+- `refactor`: to format the files from the `src/` folder according to the rules of code formatting and check errors with ESLinta
