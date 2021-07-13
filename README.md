@@ -4,7 +4,7 @@
 
 ### Short description:
 
-- `group project` of 7 developers under supervison of the project manager,
+- `group project` of 7 developers under supervision of the project manager,
 - Work organised in `kanban` system, using `Jira`, including dailies, weeklies and mutual code review,
 - created with `React`,
 - using `Redux` for managing the app state and `React-Router` for routing,
@@ -27,4 +27,4 @@ To facilitate the work on the project, there are main scripts available:
 - `build`: to build the project with the files placed in `src` and `public` folders,
 - `start`: to watch changes in the `src` folder,
 - `test`: to run tests,
-- `refactor`: to format the files from the `src/` folder according to the rules of code formatting and check errors with ESLinta
+- `refactor`: to format the files from the `src/` folder according to the rules of code formatting and check errors with ESLint
